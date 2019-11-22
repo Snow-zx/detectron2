@@ -1,4 +1,3 @@
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 import argparse
 import glob
 import multiprocessing as mp
@@ -11,7 +10,7 @@ from detectron2.config import get_cfg
 from detectron2.data.detection_utils import read_image
 from detectron2.utils.logger import setup_logger
 
-from predictor import VisualizationDemo
+from demo1.predictor import VisualizationDemo
 
 # constants
 WINDOW_NAME = "COCO detections"
@@ -69,7 +68,7 @@ if __name__ == "__main__":
     logger.info("Arguments: " + str(args))
 
     cfg = setup_cfg(args)
-
+    print(cfg)
     demo = VisualizationDemo(cfg)
 
     if args.input:
